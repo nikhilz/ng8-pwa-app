@@ -1,0 +1,64 @@
+<!-- <p-toast [style]="{marginTop: '80px'}"></p-toast> -->
+<div class="container" style="margin-top: 1cm;">
+    <p-panel header="Employee Management System - Edit Employee Details">
+        <form [formGroup]="form" (ngSubmit)="updateEmployee()" class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+            <h3>First Name</h3>
+            <div class="ui-grid-row">
+                <div class="ui-float-label ui-grid-col-8">
+                    <input id="float-input"autocomplete="off" type="text" formControlName="firstname" size="30" pInputText required>
+                    <!-- <label for="float-input">First Name</label> -->
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Firstname is required"
+                        *ngIf="!form.controls['firstname'].valid && form.controls['firstname'].dirty"></p-message>
+                </div>
+            </div>
+            <h3>Last Name</h3>
+            <div class="ui-grid-row">
+                <div class="ui-float-label ui-grid-col-8">
+                    <input id="float-input"autocomplete="off" type="text" formControlName="lastname" size="30" pInputText required>
+                    <!-- <label for="float-input">First Name</label> -->
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Lastname is required"
+                        *ngIf="!form.controls['lastname'].valid && form.controls['lastname'].dirty"></p-message>
+                </div>
+            </div>
+            <h3>Age</h3>
+            <div class="ui-grid-row">
+                <div class="ui-float-label ui-grid-col-8">
+                    <input id="float-input"autocomplete="off" type="text" size="30" pKeyFilter="num" maxlength="2" formControlName="age" pInputText required>
+                    <!-- <label for="float-input">Age</label> -->
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="Age is required"
+                        *ngIf="!form.controls['age'].valid && form.controls['age'].dirty"></p-message>
+                </div>
+            </div>
+            <h3 class="first">Designation</h3>
+
+            <div class="ui-grid-row">
+                <div class="ui-float-label ui-grid-col-8">
+                    <input id="float-input"autocomplete="off" type="text" size="30" formControlName="designation" pInputText required>
+                    <!-- <label for="float-input">Designation</label> -->
+                </div>
+                <div class="ui-grid-col-4">
+                    <p-message severity="error" text="designation is required"
+                        *ngIf="!form.controls['designation'].valid && form.controls['designation'].dirty"></p-message>
+                </div>
+            </div>
+            <p-footer class="ui-grid-row ui-float-label  ui-grid-col-8">
+
+                <div class="ui-grid-col-2">
+                    <button pButton type="submit" [disabled]="form.invalid" label="Save" icon="pi pi-check"
+                        style="margin-right: .25em" class="ui-grid-col-2"></button>
+                </div>
+                <div class="ui-grid-col-2" style="float: left;">
+                    <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary"
+                        (click)="cancelUpdate()" class="ui-grid-col-2"></button>
+                </div>
+
+            </p-footer>
+        </form>
+    </p-panel>
+</div>

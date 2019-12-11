@@ -1,0 +1,30 @@
+[
+{
+    "id": "1",
+    "firstname": "Lalit",
+    "lastname": "Aggarwal",
+    "age": 26,
+    "designation": "Associate Lead, Technology"
+  },
+  {
+    "id": "2",
+    "firstname": "Raju",
+    "lastname": "Chacha",
+    "age": 50,
+    "designation": "Dhaniya"
+  },
+  {
+    "id": "3",
+    "firstname": "Kanta",
+    "lastname": "bhen",
+    "age": 50,
+    "designation": "Gixxer wala"
+  },
+  {
+    "id": "4",
+    "firstname": "ABC",
+    "lastname": "XYZ",
+    "age": 50,
+    "designation": "BC"
+  }
+]
